@@ -29,7 +29,8 @@ jobs:
         with:
            script: |
                const coredemo = require('@actions/core')
-               return await coredemo.getIDToken()
+               return await coredemo.getIDToken()            
+           result-encoding: string
       - name: Build And Deploy
         id: builddeploy
         uses: mkarmark/staticstiesactionoryx@master
